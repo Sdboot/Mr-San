@@ -619,41 +619,52 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .header {
+        padding: 10px 0 !important;
+    }
+
     .header .container {
-        padding: 0;
-        margin: 0;
-        max-width: none;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
     }
 
     .container {
-        padding: 0;
-    }
-
-    .header {
-        padding: 12px 0;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
     }
 
     .nav-wrapper {
-        justify-content: flex-start;
-        gap: 12px;
-        padding: 0;
-        padding-right: 15px;
+        display: flex !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        gap: 15px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
     }
 
     .logo {
-        flex-shrink: 0;
-        margin: 0;
-        padding: 0;
+        flex: 0 0 auto;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex;
+        align-items: center;
     }
 
     .logo-img {
-        max-height: 45px;
-        width: 60px;
+        max-height: 40px;
+        width: 55px;
+        display: block;
     }
 
     .hamburger {
-        display: flex;
+        display: flex !important;
         margin-left: auto;
+        flex-shrink: 0;
     }
 
     .navbar {
