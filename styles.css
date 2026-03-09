@@ -619,6 +619,10 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+
     .header {
         padding: 12px 0;
     }
@@ -626,6 +630,7 @@ body {
     .nav-wrapper {
         justify-content: flex-start;
         gap: 12px;
+        padding: 0 15px;
     }
 
     .logo {
