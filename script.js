@@ -89,7 +89,7 @@ function updateCartDisplay() {
     
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
-        cartTotalElement.textContent = '$0.00';
+        cartTotalElement.textContent = '₦0.00';
         return;
     }
     
@@ -101,7 +101,7 @@ function updateCartDisplay() {
         cartItem.innerHTML = `
             <div class="cart-item-info">
                 <h4>${item.name}</h4>
-                <p>$${item.price.toFixed(2)} x ${item.quantity} = $${itemTotal}</p>
+                <p>₦${item.price.toLocaleString('en-NG')} x ${item.quantity} = ₦${itemTotal.toLocaleString('en-NG')}</p>
             </div>
             <div class="cart-item-actions">
                 <button class="quantity-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
@@ -115,7 +115,7 @@ function updateCartDisplay() {
     
     // Calculate and update total
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    cartTotalElement.textContent = '$' + total.toFixed(2);
+    cartTotalElement.textContent = '₦' + total.toLocaleString('en-NG');
 }
 
 // Toggle cart sidebar
@@ -235,7 +235,7 @@ function updateOrderSummary() {
     
     if (cart.length === 0) {
         orderSummary.innerHTML = '<p class="empty-cart">No items in cart</p>';
-        orderTotal.textContent = '$0.00';
+        orderTotal.textContent = '₦0.00';
         return;
     }
     
@@ -248,13 +248,13 @@ function updateOrderSummary() {
                 <span class="order-item-name">${item.name}</span>
                 <span style="color: #666; font-size: 12px;"> x${item.quantity}</span>
             </div>
-            <span class="order-item-price">$${itemTotal}</span>
+            <span class="order-item-price">₦${itemTotal.toLocaleString('en-NG')}</span>
         `;
         orderSummary.appendChild(orderItem);
     });
     
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2);
-    orderTotal.textContent = '$' + total;
+    orderTotal.textContent = '₦' + parseFloat(total).toLocaleString('en-NG');
 }
 
 // Submit contact form
