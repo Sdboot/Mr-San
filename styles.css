@@ -623,18 +623,13 @@ body {
         padding: 10px 0 !important;
     }
 
-    .header .container {
-        padding: 0 !important;
-        margin: 0 !important;
-        max-width: 100% !important;
-        width: 100% !important;
-    }
-
+    .header .container,
     .container {
         padding: 0 !important;
         margin: 0 !important;
         max-width: 100% !important;
         width: 100% !important;
+        display: block !important;
     }
 
     .nav-wrapper {
