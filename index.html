@@ -21,6 +21,7 @@
                         <li><a href="#clothes">Clothes</a></li>
                         <li><a href="#gadgets">Gadgets</a></li>
                         <li><a href="#other">Other</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <button class="cart-btn" onclick="toggleCart()">
@@ -159,6 +160,75 @@
                     <p class="price">$44.99</p>
                     <p class="description">Luxurious scarf for elegance and warmth</p>
                     <button onclick="addToCart('Premium Scarf', 44.99)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">📞 Contact & Delivery</h2>
+            <div class="contact-wrapper">
+                <form id="contactForm" class="contact-form" onsubmit="submitContact(event)">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Delivery Address *</label>
+                        <textarea id="address" name="address" required placeholder="Street Address, City, State, ZIP" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City *</label>
+                        <input type="text" id="city" name="city" required placeholder="New York">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="state">State/Province *</label>
+                            <input type="text" id="state" name="state" required placeholder="NY">
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">ZIP/Postal Code *</label>
+                            <input type="text" id="zip" name="zip" required placeholder="10001">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country *</label>
+                        <input type="text" id="country" name="country" required placeholder="United States">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Additional Notes</label>
+                        <textarea id="message" name="message" placeholder="Any special delivery instructions..." rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="checkout-btn">Complete Order</button>
+                </form>
+
+                <div class="contact-info">
+                    <h3>Order Summary</h3>
+                    <div id="orderSummary" class="order-summary">
+                        <p class="empty-cart">No items in cart</p>
+                    </div>
+                    <div class="order-total">
+                        <strong>Total: </strong>
+                        <span id="orderTotal">$0.00</span>
+                    </div>
                 </div>
             </div>
         </div>

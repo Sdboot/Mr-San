@@ -133,26 +133,14 @@ function checkout() {
         alert('Your cart is empty. Please add some items!');
         return;
     }
+
+    // Close cart sidebar
+    toggleCart();
     
-    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2);
-    const itemsList = cart.map(item => `${item.name} (x${item.quantity})`).join('\n');
-    
-    const confirmOrder = confirm(
-        `Order Summary:\n\n${itemsList}\n\nTotal: $${total}\n\nProceed to checkout?`
-    );
-    
-    if (confirmOrder) {
-        // Simulate payment processing
-        showNotification('Processing payment...');
-        
-        setTimeout(() => {
-            cart = [];
-            saveCart();
-            updateCartDisplay();
-            toggleCart();
-            showNotification('Order placed successfully! Thank you for shopping with Mr SAN!');
-        }, 2000);
-    }
+    // Scroll to contact form and populate order summary
+    updateOrderSummary();
+    scrollToSection('contact');
+    showNotification('Please complete your delivery information to finalize your order');
 }
 
 // Show notification
@@ -237,3 +225,91 @@ window.addEventListener('beforeunload', (e) => {
         e.returnValue = '';
     }
 });
+
+// Update order summary in contact form
+function updateOrderSummary() {
+    const orderSummary = document.getElementById('orderSummary');
+    const orderTotal = document.getElementById('orderTotal');
+    
+    orderSummary.innerHTML = '';
+    
+    if (cart.length === 0) {
+        orderSummary.innerHTML = '<p class="empty-cart">No items in cart</p>';
+        orderTotal.textContent = '$0.00';
+        return;
+    }
+    
+    cart.forEach(item => {
+        const itemTotal = (item.price * item.quantity).toFixed(2);
+        const orderItem = document.createElement('div');
+        orderItem.className = 'order-item';
+        orderItem.innerHTML = `
+            <div>
+                <span class="order-item-name">${item.name}</span>
+                <span style="color: #666; font-size: 12px;"> x${item.quantity}</span>
+            </div>
+            <span class="order-item-price">$${itemTotal}</span>
+        `;
+        orderSummary.appendChild(orderItem);
+    });
+    
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2);
+    orderTotal.textContent = '$' + total;
+}
+
+// Submit contact form
+function submitContact(event) {
+    event.preventDefault();
+    
+    if (cart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+    }
+    
+    // Get form data
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        address: document.getElementById('address').value,
+        city: document.getElementById('city').value,
+        state: document.getElementById('state').value,
+        zip: document.getElementById('zip').value,
+        country: document.getElementById('country').value,
+        message: document.getElementById('message').value,
+        cartItems: cart,
+        total: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)
+    };
+    
+    // Save order to localStorage
+    const orders = JSON.parse(localStorage.getItem('mrSanOrders') || '[]');
+    orders.push({
+        ...formData,
+        orderId: 'MR-SAN-' + Date.now(),
+        orderDate: new Date().toLocaleString()
+    });
+    localStorage.setItem('mrSanOrders', JSON.stringify(orders));
+    
+    // Show success message
+    showNotification('Order placed successfully! Thank you for shopping with Mr SAN!');
+    
+    // Reset form and cart
+    document.getElementById('contactForm').reset();
+    cart = [];
+    saveCart();
+    updateCartDisplay();
+    updateOrderSummary();
+    
+    // Show order confirmation
+    const confirmationMessage = `
+Order Confirmation
+Order ID: ${orders[orders.length - 1].orderId}
+Thank you for your purchase!
+
+We will send you a confirmation email at: ${formData.email}
+    `;
+    
+    setTimeout(() => {
+        alert(confirmationMessage);
+    }, 500);
+}
