@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr SAN - Premium Fashion & Accessories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>Mr SAN</h1>
+                    <p class="tagline">Premium Fashion & Accessories</p>
+                </div>
+                <nav class="navbar">
+                    <ul class="nav-menu">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#jewelry">Jewelry</a></li>
+                        <li><a href="#clothes">Clothes</a></li>
+                        <li><a href="#gadgets">Gadgets</a></li>
+                        <li><a href="#other">Other</a></li>
+                    </ul>
+                </nav>
+                <button class="cart-btn" onclick="toggleCart()">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="public/welcome video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            
+            <p>Discover Exceptional Style and Quality</p>
+            <button class="cta-btn" onclick="scrollToSection('jewelry')">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Jewelry Section -->
+    <section id="jewelry" class="section">
+        <div class="container">
+            <h2 class="section-title">✨ Jewelry</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="public/Images/gym 1.jfif" alt="Premium Necklace">
+                    <h3>Premium Necklace</h3>
+                    <p class="price">$89.99</p>
+                    <p class="description">Elegant gold-plated necklace with premium finish</p>
+                    <button onclick="addToCart('Premium Necklace', 89.99)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="public/Images/gym 2.jfif" alt="Designer Bracelet">
+                    <h3>Designer Bracelet</h3>
+                    <p class="price">$65.99</p>
+                    <p class="description">Sleek bracelet with modern design</p>
+                    <button onclick="addToCart('Designer Bracelet', 65.99)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="public/Images/gym 3.jfif" alt="Luxury Earrings">
+                    <h3>Luxury Earrings</h3>
+                    <p class="price">$79.99</p>
+                    <p class="description">Stunning earrings with crystal details</p>
+                    <button onclick="addToCart('Luxury Earrings', 79.99)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clothes Section -->
+    <section id="clothes" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">👕 Clothes</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="public/Images/rack 2.jfif" alt="Premium T-Shirt">
+                    <h3>Premium T-Shirt</h3>
+                    <p class="price">$49.99</p>
+                    <p class="description">Comfortable cotton premium t-shirt</p>
+                    <button onclick="addToCart('Premium T-Shirt', 49.99)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="public/Images/gym 1.jfif" alt="Designer Jacket">
+                    <h3>Designer Jacket</h3>
+                    <p class="price">$149.99</p>
+                    <p class="description">Stylish jacket perfect for any occasion</p>
+                    <button onclick="addToCart('Designer Jacket', 149.99)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="public/Images/gym 2.jfif" alt="Casual Pants">
+                    <h3>Casual Pants</h3>
+                    <p class="price">$59.99</p>
+                    <p class="description">Modern fit casual pants for everyday wear</p>
+                    <button onclick="addToCart('Casual Pants', 59.99)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gadgets Section -->
+    <section id="gadgets" class="section">
+        <div class="container">
+            <h2 class="section-title">⌚ Gadgets</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="public/Images/gym 3.jfif" alt="Smart Watch">
+                    <h3>Smart Watch</h3>
+                    <p class="price">$199.99</p>
+                    <p class="description">Latest technology smartwatch with fitness tracking</p>
+                    <button onclick="addToCart('Smart Watch', 199.99)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="public/Images/rack 2.jfif" alt="Wireless Earbuds">
+                    <h3>Wireless Earbuds</h3>
+                    <p class="price">$129.99</p>
+                    <p class="description">Premium sound quality wireless earbuds</p>
+                    <button onclick="addToCart('Wireless Earbuds', 129.99)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="public/Images/gym 1.jfif" alt="Portable Speaker">
+                    <h3>Portable Speaker</h3>
+                    <p class="price">$89.99</p>
+                    <p class="description">Compact speaker with amazing audio quality</p>
+                    <button onclick="addToCart('Portable Speaker', 89.99)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Fashion Items Section -->
+    <section id="other" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">🎩 Other Fashion Items</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="public/Images/gym 2.jfif" alt="Premium Hat">
+                    <h3>Premium Hat</h3>
+                    <p class="price">$39.99</p>
+                    <p class="description">Classic style hat for all seasons</p>
+                    <button onclick="addToCart('Premium Hat', 39.99)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="public/Images/gym 3.jfif" alt="Designer Sunglasses">
+                    <h3>Designer Sunglasses</h3>
+                    <p class="price">$119.99</p>
+                    <p class="description">Trendy sunglasses with UV protection</p>
+                    <button onclick="addToCart('Designer Sunglasses', 119.99)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="public/Images/rack 2.jfif" alt="Premium Scarf">
+                    <h3>Premium Scarf</h3>
+                    <p class="price">$44.99</p>
+                    <p class="description">Luxurious scarf for elegance and warmth</p>
+                    <button onclick="addToCart('Premium Scarf', 44.99)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Mr SAN. All rights reserved. | Premium Fashion & Accessories</p>
+            <p>Quality • Style • Innovation</p>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="close-cart" onclick="toggleCart()">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total:</strong>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+            <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
