@@ -218,14 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadCart();
 });
 
-// Prevent accidental page reload with items in cart
-window.addEventListener('beforeunload', (e) => {
-    if (cart.length > 0) {
-        e.preventDefault();
-        e.returnValue = '';
-    }
-});
-
 // Update order summary in contact form
 function updateOrderSummary() {
     const orderSummary = document.getElementById('orderSummary');
