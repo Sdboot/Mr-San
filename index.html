@@ -19,7 +19,7 @@
                     <span></span>
                     <span></span>
                 </button>
-                <nav class="navbar" id="navbar">
+<nav class="navbar" id="navbar">
                     <ul class="nav-menu">
                         <li><a href="index.html">Home</a></li>
                         <li class="dropdown">
@@ -42,9 +42,15 @@
                         </li>
                         <li><a href="shop.html#gadgets">Gadgets</a></li>
                         <li><a href="shop.html#contact">Contact</a></li>
+                        <li class="mobile-cart">
+                            <button class="cart-btn" onclick="toggleCart()">
+                                <span class="cart-icon">🛒</span>
+                                <span class="cart-count" id="cart-count">0</span>
+                            </button>
+                        </li>
                     </ul>
                 </nav>
-                <button class="cart-btn" onclick="toggleCart()">
+                <button class="cart-btn desktop-cart" onclick="toggleCart()">
                     <span class="cart-icon">🛒</span>
                     <span class="cart-count" id="cart-count">0</span>
                 </button>
