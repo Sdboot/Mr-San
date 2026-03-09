@@ -619,6 +619,12 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .header .container {
+        padding: 0;
+        margin: 0;
+        max-width: none;
+    }
+
     .container {
         padding: 0;
     }
