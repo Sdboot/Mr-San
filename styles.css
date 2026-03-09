@@ -33,6 +33,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    width: 100%;
 }
 
 .logo h1 {
@@ -618,8 +619,18 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-wrapper {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
     .hamburger {
         display: flex;
+        margin-left: auto;
     }
 
     .navbar {
