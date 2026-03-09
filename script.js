@@ -1,6 +1,32 @@
 // Shopping Cart Array
 let cart = [];
 
+// Toggle Mobile Menu
+function toggleMobileMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.getElementById('navbar');
+    
+    if (hamburger && navbar) {
+        hamburger.classList.toggle('active');
+        navbar.classList.toggle('active');
+    }
+}
+
+// Close menu when link is clicked
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-menu a, .dropdown-menu a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const hamburger = document.getElementById('hamburger');
+            const navbar = document.getElementById('navbar');
+            if (hamburger && navbar) {
+                hamburger.classList.remove('active');
+                navbar.classList.remove('active');
+            }
+        });
+    });
+});
+
 // Load cart from localStorage
 function loadCart() {
     const savedCart = localStorage.getItem('mrSanCart');
