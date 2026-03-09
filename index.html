@@ -17,10 +17,25 @@
                 <nav class="navbar">
                     <ul class="nav-menu">
                         <li><a href="#hero">Home</a></li>
-                        <li><a href="#jewelry">Jewelry</a></li>
-                        <li><a href="#clothes">Clothes</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Men's Fashion</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#mens-luxury">Luxury Wears</a></li>
+                                <li><a href="#mens-shoes">Shoes</a></li>
+                                <li><a href="#mens-bags">Bags</a></li>
+                                <li><a href="#mens-jewelry">Jewelry</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Women's Fashion</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#womens-luxury">Luxury Wears</a></li>
+                                <li><a href="#womens-shoes">Shoes</a></li>
+                                <li><a href="#womens-bags">Bags</a></li>
+                                <li><a href="#womens-jewelry">Jewelry</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#gadgets">Gadgets</a></li>
-                        <li><a href="#other">Other</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -39,67 +54,275 @@
             Your browser does not support the video tag.
         </video>
         <div class="hero-content">
-            
+            <h2>Welcome to Mr SAN</h2>
             <p>Discover Exceptional Style and Quality</p>
-            <button class="cta-btn" onclick="scrollToSection('jewelry')">Shop Now</button>
+            <button class="cta-btn" onclick="scrollToSection('mens-luxury')">Shop Now</button>
         </div>
     </section>
 
     <!-- Jewelry Section -->
-    <section id="jewelry" class="section">
+    <section id="mens-luxury" class="section">
         <div class="container">
-            <h2 class="section-title">Jewelry</h2>
+            <h2 class="section-title">👔 Men's Luxury Wears</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <img src="./Images/gym 1.jfif" alt="Premium Necklace">
-                    <h3>Premium Necklace</h3>
+                    <img src="./Images/gym 1.jfif" alt="Premium Shirt">
+                    <h3>Premium Shirt</h3>
                     <p class="price">₦13,950</p>
-                    <p class="description">Elegant gold-plated necklace with premium finish</p>
-                    <button onclick="addToCart('Premium Necklace', 13950)" class="add-to-cart-btn">Add to Cart</button>
+                    <p class="description">Elegant premium dress shirt with fine finish</p>
+                    <button onclick="addToCart('Premium Shirt', 13950)" class="add-to-cart-btn">Add to Cart</button>
                 </div>
                 <div class="product-card">
-                    <img src="./Images/gym 2.jfif" alt="Designer Bracelet">
-                    <h3>Designer Bracelet</h3>
+                    <img src="./Images/gym 2.jfif" alt="Designer Blazer">
+                    <h3>Designer Blazer</h3>
                     <p class="price">₦10,235</p>
-                    <p class="description">Sleek bracelet with modern design</p>
-                    <button onclick="addToCart('Designer Bracelet', 10235)" class="add-to-cart-btn">Add to Cart</button>
+                    <p class="description">Sleek blazer with modern design</p>
+                    <button onclick="addToCart('Designer Blazer', 10235)" class="add-to-cart-btn">Add to Cart</button>
                 </div>
                 <div class="product-card">
-                    <img src="./Images/gym 3.jfif" alt="Luxury Earrings">
-                    <h3>Luxury Earrings</h3>
+                    <img src="./Images/gym 3.jfif" alt="Luxury Trousers">
+                    <h3>Luxury Trousers</h3>
                     <p class="price">₦12,398</p>
-                    <p class="description">Stunning earrings with crystal details</p>
-                    <button onclick="addToCart('Luxury Earrings', 12398)" class="add-to-cart-btn">Add to Cart</button>
+                    <p class="description">Premium tailored trousers with perfect fit</p>
+                    <button onclick="addToCart('Luxury Trousers', 12398)" class="add-to-cart-btn">Add to Cart</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Clothes Section -->
-    <section id="clothes" class="section alt-bg">
+    <!-- Women's Luxury Section -->
+    <section id="womens-luxury" class="section alt-bg">
         <div class="container">
-            <h2 class="section-title">Clothes</h2>
+            <h2 class="section-title">👗 Women's Luxury Wears</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <img src="./Images/rack 2.jfif" alt="Premium T-Shirt">
-                    <h3>Premium T-Shirt</h3>
+                    <img src="./Images/rack 2.jfif" alt="Evening Gown">
+                    <h3>Evening Gown</h3>
                     <p class="price">₦7,750</p>
-                    <p class="description">Comfortable cotton premium t-shirt</p>
-                    <button onclick="addToCart('Premium T-Shirt', 7750)" class="add-to-cart-btn">Add to Cart</button>
+                    <p class="description">Elegant evening gown for special occasions</p>
+                    <button onclick="addToCart('Evening Gown', 7750)" class="add-to-cart-btn">Add to Cart</button>
                 </div>
                 <div class="product-card">
-                    <img src="./Images/gym 1.jfif" alt="Designer Jacket">
-                    <h3>Designer Jacket</h3>
+                    <img src="./Images/gym 1.jfif" alt="Designer Dress">
+                    <h3>Designer Dress</h3>
                     <p class="price">₦232,450</p>
-                    <p class="description">Stylish jacket perfect for any occasion</p>
-                    <button onclick="addToCart('Designer Jacket', 232450)" class="add-to-cart-btn">Add to Cart</button>
+                    <p class="description">Stylish designer dress perfect for any occasion</p>
+                    <button onclick="addToCart('Designer Dress', 232450)" class="add-to-cart-btn">Add to Cart</button>
                 </div>
                 <div class="product-card">
-                    <img src="./Images/gym 2.jfif" alt="Casual Pants">
-                    <h3>Casual Pants</h3>
+                    <img src="./Images/gym 2.jfif" alt="Casual Dress">
+                    <h3>Casual Dress</h3>
                     <p class="price">₦9,298</p>
-                    <p class="description">Modern fit casual pants for everyday wear</p>
-                    <button onclick="addToCart('Casual Pants', 9298)" class="add-to-cart-btn">Add to Cart</button>
+                    <p class="description">Modern fit casual dress for everyday wear</p>
+                    <button onclick="addToCart('Casual Dress', 9298)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Men's Shoes Section -->
+    <section id="mens-shoes" class="section">
+        <div class="container">
+            <h2 class="section-title">👞 Men's Shoes</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="./Images/gym 3.jfif" alt="Formal Loafers">
+                    <h3>Formal Loafers</h3>
+                    <p class="price">₦309,850</p>
+                    <p class="description">Premium formal loafers with leather finish</p>
+                    <button onclick="addToCart('Formal Loafers', 309850)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./Images/rack 2.jfif" alt="Casual Sneakers">
+                    <h3>Casual Sneakers</h3>
+                    <p class="price">₦201,350</p>
+                    <p class="description">Comfortable casual sneakers for everyday wear</p>
+                    <button onclick="addToCart('Casual Sneakers', 201350)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./Images/gym 1.jfif" alt="Sports Shoes">
+                    <h3>Sports Shoes</h3>
+                    <p class="price">₦139,450</p>
+                    <p class="description">High-performance sports shoes with excellent grip</p>
+                    <button onclick="addToCart('Sports Shoes', 139450)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Women's Shoes Section -->
+    <section id="womens-shoes" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">👠 Women's Shoes</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="./Images/gym 2.jfif" alt="Heels">
+                    <h3>Designer Heels</h3>
+                    <p class="price">₦6,198</p>
+                    <p class="description">Elegant designer heels for special occasions</p>
+                    <button onclick="addToCart('Designer Heels', 6198)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./Images/gym 3.jfif" alt="Casual Flats">
+                    <h3>Casual Flats</h3>
+                    <p class="price">₦185,950</p>
+                    <p class="description">Comfortable casual flats for everyday wear</p>
+                    <button onclick="addToCart('Casual Flats', 185950)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./Images/rack 2.jfif" alt="Sneakers">
+                    <h3>Women's Sneakers</h3>
+                    <p class="price">₦6,970</p>
+                    <p class="description">Stylish sneakers with premium comfort</p>
+                    <button onclick="addToCart('Women\'s Sneakers', 6970)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Men's Bags Section -->
+    <section id="mens-bags" class="section">
+        <div class="container">
+            <h2 class="section-title">👜 Men's Bags</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="./Images/gym 1.jfif" alt="Leather Briefcase">
+                    <h3>Leather Briefcase</h3>
+                    <p class="price">₦7,750</p>
+                    <p class="description">Premium leather briefcase for professionals</p>
+                    <button onclick="addToCart('Leather Briefcase', 7750)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./Images/gym 2.jfif" alt="Backpack">
+                    <h3>Designer Backpack</h3>
+                    <p class="price">₦232,450</p>
+                    <p class="description">Stylish backpack for travel and daily use</p>
+                    <button onclick="addToCart('Designer Backpack', 232450)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./Images/gym 3.jfif" alt="Sling Bag">
+                    <h3>Sling Bag</h3>
+                    <p class="price">₦9,298</p>
+                    <p class="description">Compact sling bag for casual outings</p>
+                    <button onclick="addToCart('Sling Bag', 9298)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Women's Bags Section -->
+    <section id="womens-bags" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">👛 Women's Bags</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="./Images/rack 2.jfif" alt="Designer Handbag">
+                    <h3>Designer Handbag</h3>
+                    <p class="price">₦309,850</p>
+                    <p class="description">Luxury designer handbag with premium leather</p>
+                    <button onclick="addToCart('Designer Handbag', 309850)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./Images/gym 1.jfif" alt="Shoulder Bag">
+                    <h3>Shoulder Bag</h3>
+                    <p class="price">₦201,350</p>
+                    <p class="description">Elegant shoulder bag for work and leisure</p>
+                    <button onclick="addToCart('Shoulder Bag', 201350)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./Images/gym 2.jfif" alt="Clutch">
+                    <h3>Evening Clutch</h3>
+                    <p class="price">₦139,450</p>
+                    <p class="description">Stylish evening clutch for special occasions</p>
+                    <button onclick="addToCart('Evening Clutch', 139450)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Men's Jewelry Section -->
+    <section id="mens-jewelry" class="section">
+        <div class="container">
+            <h2 class="section-title">⌚ Men's Jewelry</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="./Images/gym 3.jfif" alt="Designer Watch">
+                    <h3>Designer Watch</h3>
+                    <p class="price">₦6,198</p>
+                    <p class="description">Premium designer watch with elegant design</p>
+                    <button onclick="addToCart('Designer Watch', 6198)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./Images/gym 1.jfif" alt="Gold Chain">
+                    <h3>Gold Chain</h3>
+                    <p class="price">₦185,950</p>
+                    <p class="description">Premium gold chain necklace</p>
+                    <button onclick="addToCart('Gold Chain', 185950)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./Images/gym 2.jfif" alt="Bracelet">
+                    <h3>Leather Bracelet</h3>
+                    <p class="price">₦6,970</p>
+                    <p class="description">Premium leather bracelet with metal accents</p>
+                    <button onclick="addToCart('Leather Bracelet', 6970)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Women's Jewelry Section -->
+    <section id="womens-jewelry" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">💎 Women's Jewelry</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="./Images/gym 1.jfif" alt="Diamond Necklace">
+                    <h3>Diamond Necklace</h3>
+                    <p class="price">₦7,750</p>
+                    <p class="description">Elegant diamond necklace with premium finish</p>
+                    <button onclick="addToCart('Diamond Necklace', 7750)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./Images/gym 2.jfif" alt="Diamond Earrings">
+                    <h3>Diamond Earrings</h3>
+                    <p class="price">₦232,450</p>
+                    <p class="description">Stunning diamond earrings for special occasions</p>
+                    <button onclick="addToCart('Diamond Earrings', 232450)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./Images/gym 3.jfif" alt="Gold Bracelet">
+                    <h3>Gold Bracelet</h3>
+                    <p class="price">₦9,298</p>
+                    <p class="description">Premium gold bracelet with elegant design</p>
+                    <button onclick="addToCart('Gold Bracelet', 9298)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+        <div class="container">
+            <h2 class="section-title">💎 Women's Jewelry</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="./Images/gym 1.jfif" alt="Diamond Necklace">
+                    <h3>Diamond Necklace</h3>
+                    <p class="price">₦7,750</p>
+                    <p class="description">Elegant diamond necklace with premium finish</p>
+                    <button onclick="addToCart('Diamond Necklace', 7750)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./Images/gym 2.jfif" alt="Diamond Earrings">
+                    <h3>Diamond Earrings</h3>
+                    <p class="price">₦232,450</p>
+                    <p class="description">Stunning diamond earrings for special occasions</p>
+                    <button onclick="addToCart('Diamond Earrings', 232450)" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="./Images/gym 3.jfif" alt="Gold Bracelet">
+                    <h3>Gold Bracelet</h3>
+                    <p class="price">₦9,298</p>
+                    <p class="description">Premium gold bracelet with elegant design</p>
+                    <button onclick="addToCart('Gold Bracelet', 9298)" class="add-to-cart-btn">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -108,7 +331,7 @@
     <!-- Gadgets Section -->
     <section id="gadgets" class="section">
         <div class="container">
-            <h2 class="section-title">Gadgets</h2>
+            <h2 class="section-title">⌚ Gadgets & Accessories</h2>
             <div class="products-grid">
                 <div class="product-card">
                     <img src="./Images/gym 3.jfif" alt="Smart Watch">
@@ -135,40 +358,10 @@
         </div>
     </section>
 
-    <!-- Other Fashion Items Section -->
-    <section id="other" class="section alt-bg">
-        <div class="container">
-            <h2 class="section-title">Other Fashion Items</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="./Images/gym 2.jfif" alt="Premium Hat">
-                    <h3>Premium Hat</h3>
-                    <p class="price">₦6,198</p>
-                    <p class="description">Classic style hat for all seasons</p>
-                    <button onclick="addToCart('Premium Hat', 6198)" class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="./Images/gym 3.jfif" alt="Designer Sunglasses">
-                    <h3>Designer Sunglasses</h3>
-                    <p class="price">₦185,950</p>
-                    <p class="description">Trendy sunglasses with UV protection</p>
-                    <button onclick="addToCart('Designer Sunglasses', 185950)" class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="./Images/rack 2.jfif" alt="Premium Scarf">
-                    <h3>Premium Scarf</h3>
-                    <p class="price">₦6,970</p>
-                    <p class="description">Luxurious scarf for elegance and warmth</p>
-                    <button onclick="addToCart('Premium Scarf', 6970)" class="add-to-cart-btn">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Form Section -->
     <section id="contact" class="section alt-bg">
         <div class="container">
-            <h2 class="section-title">Contact & Delivery</h2>
+            <h2 class="section-title">📞 Contact & Delivery</h2>
             <div class="contact-wrapper">
                 <form id="contactForm" class="contact-form" onsubmit="submitContact(event)">
                     <div class="form-section">

@@ -92,6 +92,74 @@ body {
     width: 100%;
 }
 
+/* Dropdown Menu */
+.nav-menu .dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown-toggle:after {
+    content: '▼';
+    font-size: 10px;
+    transition: transform 0.3s ease;
+}
+
+.nav-menu .dropdown:hover .dropdown-toggle:after {
+    transform: rotate(-180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.nav-menu .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background: #ffd700;
+    color: #1a1a1a;
+    padding-left: 25px;
+}
+
+.dropdown-menu a:after {
+    display: none;
+}
+
 .cart-btn {
     background: #ffd700;
     color: #1a1a1a;
@@ -510,6 +578,31 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: rgba(45, 45, 45, 0.95);
+        box-shadow: none;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-menu .dropdown:hover .dropdown-menu {
+        max-height: 200px;
+    }
+
+    .dropdown-menu a {
+        padding-left: 40px;
+        font-size: 13px;
+    }
+
+    .dropdown-menu a:hover {
+        padding-left: 45px;
+    }
     .contact-wrapper {
         grid-template-columns: 1fr;
     }
