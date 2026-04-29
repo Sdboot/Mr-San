@@ -21,7 +21,7 @@ body {
 .header {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     color: white;
-    padding: 20px 0;
+    padding: 12px 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -626,7 +626,7 @@ body {
     }
 
     .header {
-        padding: 10px 0;
+        padding: 7px 0;
     }
 
     .nav-wrapper {
